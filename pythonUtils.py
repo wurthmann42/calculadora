@@ -8,8 +8,8 @@ def operacoes():
 def numeros_para_int():
     numeros = input("Digite os números separados por vírgula: ")
     numeros_splitado = numeros.split(',')
-    numeros_inteiros = tuple(map(int, numeros_splitado))
-    return numeros_inteiros
+    numbers = [float(x) if '.' in x else int(x) for x in numeros_splitado]
+    return numbers
 
 def opcao():
     opcao = int(input('Digite a sua opção:'))
