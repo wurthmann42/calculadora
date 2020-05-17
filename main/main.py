@@ -1,5 +1,5 @@
-from calculator import Calculador
-from pythonUtils import operacoes, numeros_para_int, opcao
+from Calculator.calculator import Calculador
+from utils.pythonUtils import operacoes, numeros_para_int, opcao
 
 c = Calculador()
 
@@ -50,7 +50,7 @@ while True:
         elif opcao == 4:
             try:
                 numeros_inteiros = numeros_para_int()
-                print(f"O resultado da divisão dos números fornecidos é: {round(c.divide(*numeros_inteiros), 2)}")
+                print(f"O resultado da divisão dos números fornecidos é: {c.divide(*numeros_inteiros)}")
                 opcao2 = input("Fazer outra operação de divisão? [S/N]").lower()
                 while opcao2 not in "sn":
                     print("opcão inválida")
