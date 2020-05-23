@@ -9,5 +9,8 @@ pip install -r requirements.txt
 Após isso, execute o projeto utizando o comando:
 python3 main/main.py
 
-Para executar os testes utilize o comando:
+Para executar os testes utilize o comando na raiz do projeto:
 py.test tests/tests_main.py
+
+Para executar os tested BDD, dentro do diretório tests/, utilize o comando: 
+behave calc.feature
