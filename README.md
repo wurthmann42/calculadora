@@ -12,5 +12,5 @@ python3 main/main.py
 Para executar os testes utilize o comando na raiz do projeto:
 py.test tests/tests_main.py
 
-Para executar os tested BDD, dentro do diretório tests/, utilize o comando: 
+##Para executar os tested BDD, dentro do diretório tests/, utilize o comando: 
 behave calc.feature
