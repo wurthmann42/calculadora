@@ -21,7 +21,6 @@ class Calculador:
         res = args[0]
         for numbers in args[1:]:
             if numbers == 0:
-                return 'Not a number'
+                return "Not a number"
             res /= numbers
         return res
-        
