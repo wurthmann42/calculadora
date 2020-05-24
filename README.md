@@ -14,3 +14,6 @@ py.test tests/tests_main.py
 
 Para executar os tested BDD, dentro do diretório tests/, utilize o comando: 
 behave calc.feature
+
+Se tiver qualquer problema com imports de módulos e pacotes, sete a variavel de ambiente:
+export PYTHONPATH="$PYTHONPATH:$HOME/.python"
