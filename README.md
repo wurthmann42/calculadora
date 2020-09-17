@@ -1,4 +1,4 @@
-# Calculadora Simples
+# Calculadora
 
 ## Calculadora construída na linguagem Python. Os testes foram criados com a biblioteca pytest.
 O projeto faz parte de uma atividade prática sobre Testes de software da matéria de Engenharia de Software, lecionada por Prof. Ruy Nishimura na faculdade Anhembi Morumbi.
