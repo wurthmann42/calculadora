@@ -1,7 +1,7 @@
 # Calculadora
 
 ## Calculadora construída na linguagem Python. Os testes foram criados com a biblioteca pytest.
-O projeto faz parte de uma atividade prática sobre Testes de software da matéria de Engenharia de Software, lecionada por Prof. Ruy Nishimura na faculdade Anhembi Morumbi.
+O projeto faz parte de uma atividade prática sobre Testes de software da matéria de Engenharia de Software, lecionada por Prof. Ruy Nishimura e tem como principal intuito praticar o uso da linguagem e exercitar conceitos sobre testes.
 
 Para executar o projeto no seu ambiente, instale as dependencias utilizando o comando: <br />
 `pip install -r requirements.txt`
