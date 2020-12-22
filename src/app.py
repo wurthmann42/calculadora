@@ -1,87 +1,41 @@
 from calculator import Calculador
 from utils.python_utils import Utils as utils
 
+OPERATION_TYPE={
+        1: "soma",
+        2: "subtracao",
+        3: "multiplicacao",
+        4: "divisao",
+        5: "exit"
+        }
+
+calc = Calculador()
 
 def main():
-    c = Calculador()
-
     while True:
         utils.operacoes()
-        try:
-            opcao = int(input("Digite a sua opção:"))
-        except Exception:
-            print("Digite uma opção válida")
-            opcao = int(input("Digite a sua opção:"))
-        while True:
-            if opcao == 1:
-                try:
-                    numeros_inteiros = utils.numeros_para_int()
-                    print(
-                        f"O resultado da soma dos números fornecidos é: {round(c.soma(*numeros_inteiros), 2)}"
-                    )
-                    opcao2 = str(input(f"Fazer outra operação de soma? [S/N]")).lower()
-                    while opcao2 not in "sn":
-                        print("opcão inválida")
-                        opcao2 = str(
-                            input(f"Fazer outra operação de soma? [S/N]")
-                        ).lower()
-                    if opcao2 == "n":
-                        break
-                except Exception as e:
-                    print(e)
-            elif opcao == 2:
-                try:
-                    numeros_inteiros = utils.numeros_para_int()
-                    print(
-                        f"O resultado da subtração dos números fornecidos é: {round(c.subtrai(*numeros_inteiros), 2)}"
-                    )
-                    opcao2 = input(f"Fazer outra operação de subtração? [S/N]").lower()
-                    while opcao2 not in "sn":
-                        print("opcão inválida")
-                        opcao2 = str(
-                            input(f"Fazer outra operação de subtração? [S/N]")
-                        ).lower()
-                    if opcao2 == "n":
-                        break
-                except Exception as e:
-                    print(e)
-            elif opcao == 3:
-                try:
-                    numeros_inteiros = utils.numeros_para_int()
-                    print(
-                        f"O resultado da multiplicação dos números fornecidos é: {round(c.multiplica(*numeros_inteiros), 2)}"
-                    )
-                    opcao2 = input(
-                        "Fazer outra operação de multiplicação? [S/N]"
-                    ).lower()
-                    while opcao2 not in "sn":
-                        print("opcão inválida")
-                        opcao2 = str(
-                            input(f"Fazer outra operação de multiplicação? [S/N]")
-                        ).lower()
-                    if opcao2 == "n":
-                        break
-                except Exception as e:
-                    print(e)
-            elif opcao == 4:
-                try:
-                    numeros_inteiros = utils.numeros_para_int()
-                    print(
-                        f"O resultado da divisão dos números fornecidos é: {c.divide(*numeros_inteiros)}"
-                    )
-                    opcao2 = input("Fazer outra operação de divisão? [S/N]").lower()
-                    while opcao2 not in "sn":
-                        print("opcão inválida")
-                        opcao2 = str(
-                            input(f"Fazer outra operação de divisão? [S/N]")
-                        ).lower()
-                    if opcao2 == "n":
-                        break
-                except Exception as e:
-                    print(e)
-            elif opcao == 5:
-                quit()
 
+        try:
+            opcao = int(input("Digite a sua opçào: "))
+        except Exception as e:
+            print("Opção invalida")
+            opcao = int(input("Digite a sua opção: "))
+
+        operacao = OPERATION_TYPE.get(opcao)
+
+        while True:
+            try:
+                #numeros_inteiros = utils.numeros_para_int()
+                print(f"O resultado da operação é: {calc.operator(operacao)}")
+                segunda_opcao = input(f"Fazer outra operação? [S/N]").lower()
+
+                while segunda_opcao not in "sn":
+                    print("Opção inválida")
+                    segunda_opcao = input("Fazer outra operação? [S/N]").lower()
+                if segunda_opcao == "n":
+                    break
+            except Exception as e:
+                print(e)
 
 if __name__ == "__main__":
     main()
