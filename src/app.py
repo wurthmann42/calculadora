@@ -13,7 +13,7 @@ calc = Calculador()
 
 def main():
     while True:
-        utils.operacoes()
+        utils.display_operations()
 
         try:
             opcao = int(input("Digite a sua opçào: "))
@@ -35,7 +35,7 @@ def main():
                 if segunda_opcao == "n":
                     break
             except Exception as e:
-                print(e)
+                pass
 
 if __name__ == "__main__":
     main()
