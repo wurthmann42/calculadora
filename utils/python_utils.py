@@ -11,7 +11,3 @@ class Utils:
         numbers = [float(x) if "." in x else int(x) for x in numeros_splitado]
         return numbers
 
-    @staticmethod
-    def opcao():
-        opcao = int(input("Digite a sua opção:"))
-        return opcao
