@@ -1,4 +1,4 @@
-from Calculator.calculator import Calculador
+from calculator import Calculador
 from utils.pythonUtils import operacoes, numeros_para_int, opcao
 
 
