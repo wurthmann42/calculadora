@@ -1,12 +1,12 @@
 from calculator import Calculador
-from utils.pythonUtils import operacoes, numeros_para_int, opcao
+from utils.python_utils import Utils as utils
 
 
 def main():
     c = Calculador()
 
     while True:
-        operacoes()
+        utils.operacoes()
         try:
             opcao = int(input("Digite a sua opção:"))
         except Exception:
@@ -15,7 +15,7 @@ def main():
         while True:
             if opcao == 1:
                 try:
-                    numeros_inteiros = numeros_para_int()
+                    numeros_inteiros = utils.numeros_para_int()
                     print(
                         f"O resultado da soma dos números fornecidos é: {round(c.soma(*numeros_inteiros), 2)}"
                     )
@@ -31,7 +31,7 @@ def main():
                     print(e)
             elif opcao == 2:
                 try:
-                    numeros_inteiros = numeros_para_int()
+                    numeros_inteiros = utils.numeros_para_int()
                     print(
                         f"O resultado da subtração dos números fornecidos é: {round(c.subtrai(*numeros_inteiros), 2)}"
                     )
@@ -47,7 +47,7 @@ def main():
                     print(e)
             elif opcao == 3:
                 try:
-                    numeros_inteiros = numeros_para_int()
+                    numeros_inteiros = utils.numeros_para_int()
                     print(
                         f"O resultado da multiplicação dos números fornecidos é: {round(c.multiplica(*numeros_inteiros), 2)}"
                     )
@@ -65,7 +65,7 @@ def main():
                     print(e)
             elif opcao == 4:
                 try:
-                    numeros_inteiros = numeros_para_int()
+                    numeros_inteiros = utils.numeros_para_int()
                     print(
                         f"O resultado da divisão dos números fornecidos é: {c.divide(*numeros_inteiros)}"
                     )
